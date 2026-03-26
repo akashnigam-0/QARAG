@@ -1,0 +1,33 @@
+[
+  {
+    "query": "Why is AddToCartTest failing with StaleElementReferenceException?",
+    "answer": "ROOT CAUSE: The `AddToCartTest` is failing due to a stale element reference, which occurs when the element's location changes after its initial detection, but the test continues to interact with it as if it was still present.\n\nEVIDENCE: \n\"stale element reference: element is not attached to the page document\"\n Command: session/abc123/element/0.8372/click\n\nDEBUGGING STEPS:\n 1. Inspect the HTML structure of the webpage and verify that the element's location hasn't changed.\n 2. Check if there are any JavaScript interactions on the page that could be causing the element to change its location unexpectedly.\n\nRELATED BUGS: none found",
+    "context_docs": [
+      "selenium_test_log",
+      "selenium_test_log",
+      "selenium_test_log",
+      "selenium_test_log"
+    ]
+  },
+  {
+    "query": "Why did the Spark job fail with OutOfMemoryError on Stage 3?",
+    "answer": "ROOT CAUSE: The Spark job failed with an OutOfMemoryError on Stage 3 due to excessive memory usage caused by a large number of partitions in the shuffle stage.\n\nEVIDENCE: \n    Estimated data skew ratio on customer_id: 42:1\n    spark.sql.shuffle.partitions = 200\n\nDEBUGGING STEPS:\n  1. Check if the shuffle stage size is indeed 200 and adjust it if necessary.\n  2. Investigate why the estimated data skew ratio on customer_id is so high (42:1).\n  3. Verify that the spark.executor.memoryOverhead configuration is set to an acceptable value.\n\nRELATED BUGS: none found",
+    "context_docs": [
+      "spark_job_log",
+      "spark_job_log",
+      "spark_job_log",
+      "spark_job_log"
+    ]
+  },
+  {
+    "query": "Has this StaleElement issue appeared in Jira before?",
+    "answer": "ROOT CAUSE: The CartTests intermittent failure with StaleElementReferenceException is caused by React re-rendering the cart component on every add-to-cart action, invalidating previously located WebElement references.\nEVIDENCE: Root Cause: React re-renders the cart component on every add-to-cart action, invalidating previously located WebElement references. (from BUG-101)\nDEBUGGING STEPS:\n 1. Review previous Jira issues to identify similar problems and verify if this issue has appeared before.\n 2. Check Selenium test logs for other intermittent failures that may be related to DOM refresh or element stability.\nRELATED BUGS: none found\nNote: There is no indication in the provided context that a similar StaleElementReferenceException issue has appeared in Jira before (BUG-101).",
+    "context_docs": [
+      "jira_bugs_txt",
+      "jira_bugs_txt",
+      "jira_bugs_txt",
+      "jira_bugs_txt",
+      "jira_bugs_txt"
+    ]
+  }
+]

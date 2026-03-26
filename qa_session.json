@@ -1,0 +1,11 @@
+[
+  {
+    "question": "jira: has this error appeared before?",
+    "label_filter": null,
+    "answer": "ROOT CAUSE:\nThe error 'GooglePyPackageInstaller' object has no attribute 'node_ip_addresses' is a result of an incorrect installation or configuration of the GooglePyPackageInstaller, causing a SyntasaException when running the Spark Code Process.\n\nEVIDENCE:\n[Root Cause]: SyntasaException: Spark Code Process failed with error code [1] : 'GooglePyPackageInstaller' object has no attribute 'node_ip_addresses' [job | job_failures_log | score:-0.449]\n\nDEBUGGING STEPS:\n  1. Verify the installation and configuration of GooglePyPackageInstaller in the environment.\n  2. Check for any previous errors or warnings related to this package.\n\nRELATED ISSUES:\n none found",
+    "sources": [
+      "job",
+      "selenium"
+    ]
+  }
+]

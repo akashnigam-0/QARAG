@@ -1,0 +1,23 @@
+[INFO ] Test Case: Verify Spark Job Execution Status
+[INFO ] Step 1: Trigger Spark Job 'Test_Spark'
+
+[INFO ] Step 2: Waiting for job status update...
+[INFO ] Expected Status: COMPLETED
+
+[INFO ] Step 3: Fetching job execution status from UI
+
+[ERROR] Actual Status: FAILED
+[ERROR] Expected Status: COMPLETED
+
+[ERROR] Validation Failed:
+        User should be able to see job status as 'COMPLETED'
+        But actual status displayed is 'FAILED'
+
+[ERROR] Root Cause from Logs:
+        Spark Code Process failed with error code [1]
+        Reason: 'GooglePyPackageInstaller' object has no attribute 'node_ip_addresses'
+
+[WARN ] Additional Info:
+        Kubernetes client has been closed
+
+[FAIL ] Test Case Failed: Job did not complete successfully
