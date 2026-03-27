@@ -5,29 +5,14 @@ RUNNING : 1/2/26, 1:35 PM
 FAILED : 1/2/26, 1:42 PM
 [Job Name]:Test_Spark --- [Process Name]:Spark Processor --- [Process Type]:SPARK_PROCESSOR
 
-[Root Cause]: SyntasaException: Spark Code Process failed with error code [1]
+[Root Cause]: Exception: Spark Code Process failed with error code [1]
 : 'GooglePyPackageInstaller' object has no attribute 'node_ip_addresses'
-2026-01-02 08:12:31.823 WARN test--spark-spark--proc-6a3faf63-5441b69d-driver --- [ool-21-thread-1] .s.s.c.k.ExecutorPodsWatchSnapshotSource : Kubernetes client has been closed.
+2026-01-02 08:12:31.823 WARN test--spark-spark--proc-driver -] .s.s.c.k.ExecutorPodsWatchSnapshotSource : Kubernetes client has been closed.
 
 
-[Stack Trace]: com.syntasa.lib.exception.SyntasaException: Spark Code Process failed with error code [1]
+[Stack Trace]: com..lib.exception.Exception: Spark Code Process failed with error code [1]
 : 'GooglePyPackageInstaller' object has no attribute 'node_ip_addresses'
-2026-01-02 08:12:31.823 WARN test--spark-spark--proc-6a3faf63-5441b69d-driver --- [ool-21-thread-1] .s.s.c.k.ExecutorPodsWatchSnapshotSource : Kubernetes client has been closed.
+2026-01-02 08:12:31.823 WARN test--spark-spark--proc-driver - .s.s.c.k.ExecutorPodsWatchSnapshotSource : Kubernetes client has been closed.
 
-at com.syntasa.lib.processor.base.SyntasaProcessor.run(SyntasaProcessor.java:135)
-at com.syntasa.process.execute.ProcessExecutor.main(ProcessExecutor.java:78)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
-at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:1029)
-at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:194)
-at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:217)
-at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
-at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1120)
-at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1129)
-at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
-Caused by: com.syntasa.lib.exception.SyntasaException: Spark Code Process failed with error code [1]
 : 'GooglePyPackageInstaller' object has no attribute 'node_ip_addresses'
-2026-01-02 08:12:31.823 WARN test--spark-spark--proc-6a3faf63-5441b69d-driver --- [ool-21-thread-1] .s.s.c.k.ExecutorPodsWatchSnapshotSource : Kubernetes client has been closed.
+2026-01-02 08:12:31.823 WARN test--spark-spark--proc-driver -- .s.s.c.k.ExecutorPodsWatchSnapshotSource : Kubernetes client has been closed.
